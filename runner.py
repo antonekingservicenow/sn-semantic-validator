@@ -11,7 +11,9 @@ import time
 
 # Filter ID to human-readable name mapping
 FILTER_LOOKUP = {
-    "<sys_id of sys_gen_ai_filter>": "<name of filter>",
+    "4d26770a93b....": "Choice of Medical Plan",
+    "9f8f9...": "Harassment",
+    '238f5c....': "Harassment",
     # Add more mappings as needed
 }
 
@@ -53,6 +55,7 @@ def run_test_suite(instance_url, username, password, test_suite_sys_id):
         
         if progress_url:
             print('Monitoring test suite progress...')
+            # print("Progress URL: ", progress_url)
             
             while True:
                 try:
@@ -82,7 +85,7 @@ def run_test_suite(instance_url, username, password, test_suite_sys_id):
                     percent_complete = progress.get('percent_complete', 0)
                     print(f'Status: {status_label} ({percent_complete}%)')
                     
-                    if status_label in ['Completed', 'Error', 'Successful']:
+                    if status_label in ['Completed', 'Failed', 'Successful']:
                         print("\n=== Test Suite Completed ===")
                         
                         # Get the suite result ID from the results link
