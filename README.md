@@ -59,3 +59,15 @@ docker run --env-file .env sn-filter-runner <test_suite_sys_id>
 ```
 
 Replace `<test_suite_sys_id>` with your actual test suite ID. The `.env` file should contain your ServiceNow credentials and will be used to configure the environment inside the Docker container.
+
+## Example Output
+
+Below is an example of the test execution output:
+
+![Example Test Output](output.png)
+
+The output shows:
+- Real-time test suite progress monitoring
+- Individual test results with scores and filter matches
+- Test steps summary
+- Final test summary with pass/fail statistics
