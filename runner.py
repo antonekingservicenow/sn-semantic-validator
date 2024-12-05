@@ -11,7 +11,7 @@ import time
 
 # Filter ID to human-readable name mapping
 FILTER_LOOKUP = {
-    "4d26770a93b91a100d4d317a7bba10d6": "Choice of Medical Plan",
+    "<sys_id of sys_gen_ai_filter>": "<name of filter>",
     # Add more mappings as needed
 }
 
